@@ -355,32 +355,8 @@
             <br>
             <p>Beyond frontend development, I also love building physical models of houses using cardboard and simple materials. it's a hands on hobby that sharpens my eye for design and structure, which also influences how I approach layout in web development. </p>
             <br>
-            <button id="house-project-button">click here to see my handmade architectural models</button>
-
-            <div id = "house-project-pictures-container">
-                <div class="house-project-picture">
-                    <h3> FRONT VIEW</h3>
-                    <img src="houseFrontView.jpg" alt="house front view">
-
-                </div>
-                <div class="house-project-picture">
-                    <h3> LEFT VIEW</h3>
-                    <img src="houseLeftView.jpg" alt="house left view">
-                </div>
-                <div class="house-project-picture">
-                    <h3> RIGHT VIEW</h3>
-                    <img src="houseRightView.jpg" alt="house right view">
-                    
-                </div>
-                <div class="house-project-picture">
-                    <h3> BACK VIEW</h3>
-                    <img src="houseBackView.jpg" alt="house front view">
-                </div>
-                <div class="house-project-picture">
-                    <h3> TOP VIEW</h3>
-                    <img src="houseTopView.jpg" alt="house front view">
-                </div>
-            </div>
+            <a href="page2.html"><button id="house-project-button">click here to see my handmade architectural models</button></a>
+            <br>     
         </section> 
 
         <section id="contact-container">
@@ -429,7 +405,8 @@
         let navigationButton = document.querySelector("#navigation-button");
         let navigationBar = document.querySelector("nav");
         let navigationOptionContainers = document.querySelectorAll(".nav-option-container")
-
+        let houseModelPicturesPageBtn = document.querySelector("house-project-button")
+       
         navigationButton.addEventListener("click",
             function(){
                 if (navigationButton.textContent === "≡"){
