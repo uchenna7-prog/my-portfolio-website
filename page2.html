@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    
+    <style>
+        *{  
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+        font-family: "Tektur", sans-serif;
+        scroll-margin: 100px;
+        }
+
+        body{
+            background-color: gray;
+            color:white;
+        }
+           
+        #profile{
+            display:flex;
+            flex-direction: row;
+        }
+
+        header{
+            position: fixed;
+            top: 0px;
+            height: 100px;
+            width: 100%;
+            background: linear-gradient(to right,#00b4d8,#5e60ce);
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #navigation-button{
+            font-family: sans-serif;
+            font-size: 60px;
+            cursor: pointer;
+        }
+
+        #navigation-button:hover{
+            font-size: 65px;
+        }
+        nav{
+        display: none;
+        background-color: #5e60ce; 
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top:100px;
+        right:0px;
+        border-bottom-left-radius: 10px;
+        }
+        .nav-option{
+            text-decoration: none;
+            color: white;
+        }
+        .nav-option-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height:50px;
+            gap: 10px;
+        }
+        .nav-option-container:hover{
+            background-color: blue;
+        }
+
+        .heading{
+            color: #5e60ce;
+        }
+        #house-project-pictures-container{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 150px;
+            margin-bottom: 100px;
+        }
+        
+        footer{
+            height: 200px;
+            background-color: black;
+            color: white;
+        }
+
+        #socials{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #social-icons-container{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .social-icon{
+            color:white;
+            
+        }
+
+        @media (max-width:600px) {
+        #project-list-container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        #profile{
+            margin-left: 10px;
+        }
+        #navigation-button{
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        #navigation-button:hover{
+            font-size: 35px;
+
+        }
+        .nav-option-container{
+            height:30px;
+           
+        }
+         nav{
+            font-size: 10px;
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            top:100px;
+            right:0px;
+            border-bottom-left-radius: 10px;
+        }
+  
+        }
+        @media (min-width:601px) and (max-width: 1200px) {
+        #project-list-container{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            align-items: center;
+            gap: 10px;
+        }  
+        }
+       
+
+    </style>
+</head>
+<body>
+     <header>
+        <div id="profile">
+            <h4>Uchenna Uchenna</h4>
+        </div>
+        <h1 id="navigation-button">≡</h1>
+        <nav>
+            <div class="nav-option-container" >
+                <i class="fa-solid fa-house fa-xl"></i>
+                <a class="nav-option" href="index.html #home-container"><h2>HOME</h2></a>
+            </div>
+           
+            <hr>
+            <div class="nav-option-container">
+                <i class="fa-solid fa-user fa-xl"></i>
+                <a class="nav-option" href="index.html #about-container"><h2>ABOUT</h2></a>
+                
+            </div>
+            <hr>
+            <div class="nav-option-container">
+                <i class="fa-solid fa-screwdriver-wrench fa-xl"></i>
+                <a class="nav-option" href="index.html #skills-container"><h2>SKILLS</h2></a>
+            </div>
+            <hr>
+            <div class="nav-option-container">
+                <i class="fa-solid fa-laptop-code fa-xl"></i>
+                <a class="nav-option" href="index.html #projects-container"><h2>PROJECTS</h2></a>
+            </div>
+            <hr>
+             <div class="nav-option-container">
+                <i class="fa-solid fa-lightbulb fa-xl"></i>
+                <a class="nav-option" href="index.html #other-things-i-do-container"><h2>OTHER THINGS I DO</h2></a>
+            </div>
+            <hr>
+            <div class="nav-option-container">
+                <i class="fa-solid fa-phone fa-xl"></i>
+                <a class="nav-option" href="index.html #contact-container"><h2>CONTACT</h2></a>
+            </div>
+        </nav>
+
+    </header>
+    <div id = "house-project-pictures-container">
+        <div class="house-project-picture">
+            <h3  class="heading"> FRONT VIEW</h3>
+            <img src="houseFrontView.jpg" alt="house front view">
+        </div>
+        <div class="house-project-picture">
+            <h3  class="heading"> LEFT VIEW</h3>
+            <img src="houseLeftView.jpg" alt="house left view">
+        </div>
+        <div class="house-project-picture">
+            <h3  class="heading"> RIGHT VIEW</h3>
+            <img src="houseRightView.jpg" alt="house right view">    
+        </div>
+        <div class="house-project-picture">
+            <h3  class="heading"> BACK VIEW</h3>
+            <img src="houseBackView.jpg" alt="house front view">
+        </div>
+        <div class="house-project-picture">
+            <h3 class="heading"> TOP VIEW</h3>
+            <img src="houseTopView.jpg" alt="house front view">
+        </div>
+    </div>
+     <script src="https://kit.fontawesome.com/f7df50b970.js" crossorigin="anonymous"></script>
+
+    <script>
+        let navigationButton = document.querySelector("#navigation-button");
+        let navigationBar = document.querySelector("nav");
+        let navigationOptionContainers = document.querySelectorAll(".nav-option-container")
+
+        navigationButton.addEventListener("click",
+            function(){
+                if (navigationButton.textContent === "≡"){
+                    navigationBar.style.display = "block"
+                    navigationButton.textContent = "X"
+                }
+                else{
+                    navigationBar.style.display = "none"
+                    navigationButton.textContent = "≡"
+                }
+            }
+        )
+
+        navigationOptionContainers.forEach(element => {
+            element.addEventListener("click",
+                function(){
+                    navigationBar.style.display = "none";
+                    navigationButton.textContent = "≡"
+                }
+            )
+        });
+
+    </script>
+     <footer>
+        <section id="socials">
+            <h2>SOCIALS</h2>
+            <br>
+            <span id = "social-icons-container">
+                <a class="social-icon" href="https://www.linkedin.com/in/uchenna-uchendu-8852a134a/"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
+                <a class="social-icon" href="https://github.com/uchenna7-prog"><i class="fa-brands fa-github fa-2xl"></i></a>
+                <a class="social-icon" href="https://x.com/DannielUche"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+                <a class="social-icon" href="https://www.instagram.com/uchendu_uchenna?igsh=MXgxaDY2bXRnYnB6cw=="><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                <a class="social-icon" href="https://www.facebook.com/uchenna.uchendu.383796"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                <a class="social-icon" href="https://wa.link/m7opjb"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+                <a class="social-icon" href="https://www.tiktok.com/@uchennaudahniel?_t=ZM-8xv4KMqBxk0&_r=1"><i class="fa-brands fa-tiktok fa-2xl"></i></a>
+            </span>
+            <br>
+            <hr>
+            <p>© 2025 Uchenna Uchenna. All rights reserved.</p>
+        </section>
+        <section>
+            
+        </section>
+
+    </footer>
+</body>
+</html>
