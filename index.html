@@ -134,18 +134,24 @@
             flex-direction: column;
             align-items: center;
             gap: 10px;
-        };
+        }
         #profile{
-            margin-left: 5px;
-        };
+            margin-left: 10px;
+        }
         #navigation-button{
+            font-size: 30px;
             margin-right: 10px;
-        };
+        }
+        #navigation-button:hover{
+            font-size: 35px;
+
+        }
         .nav-option-container{
             height:30px;
-            font-size: 15px;
-        };
+           
+        }
          nav{
+            font-size: 10px;
             width: 180px;
             height: 180px;
             position: absolute;
@@ -319,7 +325,7 @@
              <div id = "project-list-container">
                 <div class="project">
                     <h3>Personal Portfolio</h3>
-                    <p>A personal portfolio website showcasing my skills, projects, and contact info  rmation.</p>
+                    <p>A personal portfolio website showcasing my skills, projects, and contact information.</p>
                 </div>
                 <div class="project">
                     <h3>Weather App</h3>
@@ -354,25 +360,25 @@
             <div id = "house-project-pictures-container">
                 <div class="house-project-picture">
                     <h3> FRONT VIEW</h3>
-                    <img src="websiteProject\houseFrontView.jpg" alt="house front view">
+                    <img src="houseFrontView.jpg" alt="house front view">
 
                 </div>
                 <div class="house-project-picture">
                     <h3> LEFT VIEW</h3>
-                    <img src="websiteProject\houseLeftView.jpg" alt="house left view">
+                    <img src="houseLeftView.jpg" alt="house left view">
                 </div>
                 <div class="house-project-picture">
                     <h3> RIGHT VIEW</h3>
-                    <img src="websiteProject\houseRightView.jpg" alt="house right view">
+                    <img src="houseRightView.jpg" alt="house right view">
                     
                 </div>
                 <div class="house-project-picture">
                     <h3> BACK VIEW</h3>
-                    <img src="websiteProject\houseBackView.jpg" alt="house front view">
+                    <img src="houseBackView.jpg" alt="house front view">
                 </div>
                 <div class="house-project-picture">
                     <h3> TOP VIEW</h3>
-                    <img src="websiteProject\houseTopView.jpg" alt="house front view">
+                    <img src="houseTopView.jpg" alt="house front view">
                 </div>
             </div>
         </section> 
@@ -401,12 +407,12 @@
             <br>
             <span id = "social-icons-container">
                 <a class="social-icon" href="https://www.linkedin.com/in/uchenna-uchendu-8852a134a/"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
-                <a class="social-icon"><i class="fa-brands fa-github fa-2xl"></i></a>
-                <a class="social-icon"><i class="fa-brands fa-twitter fa-2xl"></i></a>
-                <a class="social-icon"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                <a class="social-icon" href="https://github.com/uchenna7-prog"><i class="fa-brands fa-github fa-2xl"></i></a>
+                <a class="social-icon" href="https://x.com/DannielUche"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+                <a class="social-icon" href="https://www.instagram.com/uchendu_uchenna?igsh=MXgxaDY2bXRnYnB6cw=="><i class="fa-brands fa-instagram fa-2xl"></i></a>
                 <a class="social-icon" href="https://www.facebook.com/uchenna.uchendu.383796"><i class="fa-brands fa-facebook fa-2xl"></i></a>
-                <a class="social-icon"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
-                <a class="social-icon"><i class="fa-brands fa-tiktok fa-2xl"></i></a>
+                <a class="social-icon" href="https://wa.link/m7opjb"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+                <a class="social-icon" href="https://www.tiktok.com/@uchennaudahniel?_t=ZM-8xv4KMqBxk0&_r=1"><i class="fa-brands fa-tiktok fa-2xl"></i></a>
             </span>
             <br>
             <hr>
@@ -420,8 +426,10 @@
     <script src="https://kit.fontawesome.com/f7df50b970.js" crossorigin="anonymous"></script>
 
     <script>
-        let navigationButton = document.querySelector("#navigation-button")
-        let navigationBar = document.querySelector("nav")
+        let navigationButton = document.querySelector("#navigation-button");
+        let navigationBar = document.querySelector("nav");
+        let navigationOptionContainers = document.querySelectorAll(".nav-option-container")
+
         navigationButton.addEventListener("click",
             function(){
                 if (navigationButton.textContent === "≡"){
@@ -434,6 +442,15 @@
                 }
             }
         )
+
+        navigationOptionContainers.forEach(element => {
+            element.addEventListener("click",
+                function(){
+                    navigationBar.style.display = "none";
+                    navigationButton.textContent = "≡"
+                }
+            )
+        });
 
     </script>
 </body>
