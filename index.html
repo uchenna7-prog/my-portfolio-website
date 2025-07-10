@@ -1,22 +1,434 @@
-<div id = "house-project-pictures-container">
-        <div class="house-project-picture">
-            <h3  class="heading"> FRONT VIEW</h3>
-            <img src="houseFrontView.jpg" alt="house front view">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    
+    <style>
+
+        *{  
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            font-family: "Tektur", sans-serif;
+            scroll-margin: 100px;
+           
+        }
+
+        body{
+            background-color: black;
+            color:white;
+        }
+           
+        #profile{
+            display:flex;
+            flex-direction: row;
+        }
+
+        header{
+            position: fixed;
+            top: 0px;
+            height: 100px;
+            width: 100%;
+            background: linear-gradient(to right,#00b4d8,#5e60ce);
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #navigation-button{
+            font-family: sans-serif;
+            font-size: 60px;
+            cursor: pointer;
+        }
+
+        #navigation-button:hover{
+            font-size: 65px;
+        }
+
+        nav{
+            display: none;
+            background-color: #5e60ce; 
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top:100px;
+            right:0px;
+            border-bottom-left-radius: 10px;
+        }
+        .nav-option{
+            text-decoration: none;
+            color: white;
+        }
+        .nav-option-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height:50px;
+            gap: 10px;
+        }
+
+        .nav-option-container:hover{
+            background-color: blue;
+        }
+        #profile-picture{
+            border-radius: 10px;
+            border: 2px solid #5e60ce;
+        }
+
+        
+        #home-container{
+            text-align: center;
+            margin-top: 120px;
+          
+        }
+
+       #home-container h1{
+        color: #5e60ce;
+        font-size: 40px;
+       }
+
+        .section-heading{
+            font-size: 40px;
+            color: #5e60ce;
+
+        }
+        .section-sub-heading{
+            font-size: 20px;
+            color: #5e60ce;
+        }
+
+        .fa-html5{
+            color: orange;
+        }
+
+        .fa-css3-alt{
+            color: blue;
+        }
+        .fa-js{
+            color: yellow;
+        }
+        .fa-python {
+            color: #306998;
+        }
+        .tool-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        #project-list-container{
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            align-items: center;
+            gap: 5px;
+        }
+
+        @media (max-width:600px) {
+        #project-list-container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        #profile{
+            margin-left: 10px;
+        }
+        #navigation-button{
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        #navigation-button:hover{
+            font-size: 35px;
+
+        }
+        .nav-option-container{
+            height:30px;
+           
+        }
+         nav{
+            font-size: 10px;
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            top:100px;
+            right:0px;
+            border-bottom-left-radius: 10px;
+        }
+  
+        }
+        @media (min-width:601px) and (max-width: 1200px) {
+        #project-list-container{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            align-items: center;
+            gap: 10px;
+        }  
+        }
+        .project{
+            display: flex;
+            flex-direction: column;
+            background-color: #5e60ce;
+            width: 300px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #house-project-pictures-container{
+            background-color: #5e60ce;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 40% 40% ;
+            gap: 5px;
+        }
+
+        .house-project-picture{
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        form{
+            color: black;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer{
+            height: 200px;
+            background-color: black;
+            color: white;
+        }
+
+        #socials{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #social-icons-container{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .social-icon{
+            color:white;
+            
+        }
+        #house-project-button{
+            border-radius:10px;
+            padding: 10px;
+            background-color: #5e60ce;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div id="profile">
+            <h4>Uchenna Uchenna</h4>
         </div>
-        <div class="house-project-picture">
-            <h3  class="heading"> LEFT VIEW</h3>
-            <img src="houseLeftView.jpg" alt="house left view">
+        <h1 id="navigation-button">≡</h1>
+        <nav>
+            <div class="nav-option-container" >
+                <i class="fa-solid fa-house fa-xl"></i>
+                <a class="nav-option" href="#home-container"><h2>HOME</h2></a>
+            </div>
+           
+            <hr>
+            <div class="nav-option-container">
+                <i class="fa-solid fa-user fa-xl"></i>
+                <a class="nav-option" href="#about-container"><h2>ABOUT</h2></a>
+                
+            </div>
+            <hr>
+            <div class="nav-option-container">
+                <i class="fa-solid fa-screwdriver-wrench fa-xl"></i>
+                <a class="nav-option" href="#skills-container"><h2>SKILLS</h2></a>
+            </div>
+            <hr>
+            <div class="nav-option-container">
+                <i class="fa-solid fa-laptop-code fa-xl"></i>
+                <a class="nav-option" href="#projects-container"><h2>PROJECTS</h2></a>
+            </div>
+            <hr>
+             <div class="nav-option-container">
+                <i class="fa-solid fa-lightbulb fa-xl"></i>
+                <a class="nav-option" href="#other-things-i-do-container"><h2>OTHER THINGS I DO</h2></a>
+            </div>
+            <hr>
+            <div class="nav-option-container">
+                <i class="fa-solid fa-phone fa-xl"></i>
+                <a class="nav-option" href="#contact-container"><h2>CONTACT</h2></a>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <div id="home-container">
+            <img id = "profile-picture" width="200px" src="me.jpg" alt="Profile Picture">
+            <h2>👋 I am Uchenna</h2>
+            <h1> A frontend Developer</h1>
+            <h2>passionate about building modern,interactive websites.</h2>
         </div>
-        <div class="house-project-picture">
-            <h3  class="heading"> RIGHT VIEW</h3>
-            <img src="houseRightView.jpg" alt="house right view">    
-        </div>
-        <div class="house-project-picture">
-            <h3  class="heading"> BACK VIEW</h3>
-            <img src="houseBackView.jpg" alt="house front view">
-        </div>
-        <div class="house-project-picture">
-            <h3 class="heading"> TOP VIEW</h3>
-            <img src="houseTopView.jpg" alt="house front view">
-        </div>
-    </div>
+        <section id="about-container">
+            <br>
+            <h1 class="section-heading">ABOUT ME</h1>
+            <br>
+            <p>Hello, I am Uchendu Uchenna, a frontend developer passionate about building fast, modern, and user-friendly websites. I specialize in turning creative ideas into responsive, accessible, and visually engaging web experiences using HTML, CSS, Javascript, and frameworks like React and Tailwind CSS. </p>
+            <br>
+            <p>I'm currently studying computer science at the University of Port Harcourt, where I'm deepening my understanding of programming, problem-solving, and real-world application development. My journey into frontend development began with curiousity and a drive to create - and it quickly grew into a full-blown passion.</p>
+            <br>
+            <p>I love crafting clean interfaces, experienting with animation, and constantly learning new tools to improve my craft. My ultimate goal is to become a full-stack developer and contribute to meaningful digital products that make life better for people. </p>
+            <br>
+        </section>
+
+        <section id="skills-container">
+            <br>
+            <h1 class="section-heading">SKILLS</h1>
+            <br>
+            <div class="tool-container">
+                <i class="fa-brands fa-html5 fa-2xl"></i>
+                <h2>HTML</h2>
+            </div>
+            <br>
+            <div class="tool-container">
+                <i class="fa-brands fa-css3-alt fa-2xl"></i>
+                <h2>CSS</h2>
+            </div>
+            <br>
+            <div class="tool-container">
+                <i class="fa-brands fa-js fa-2xl"></i>
+                <h2>Javascript</h2>
+            </div>
+            <br>
+            <div class="tool-container">
+                <i class="fa-brands fa-python fa-2xl"></i>
+                <h2>Python</h2>
+            </div>
+            <br>
+            <div class="tool-container">
+                <i class="fa-brands fa-github fa-xl"></i>
+                <h2>GitHub</h2>
+            </div>
+            <br>
+        </section>
+
+        <section id="projects-container">
+             <h1 class="section-heading">PROJECTS</h1>
+             <div id = "project-list-container">
+                <div class="project">
+                    <h3>Personal Portfolio</h3>
+                    <p>A personal portfolio website showcasing my skills, projects, and contact information.</p>
+                </div>
+                <div class="project">
+                    <h3>Weather App</h3>
+                    <p>A weather application that provides real-time weather updates and forecasts for any location.</p>
+                </div>
+                <div class="project">
+                    <h3>Todo List</h3>
+                    <p>A simple todo list application that allows users to add, edit, and delete tasks.</p>
+                </div>
+                <div class="project">
+                    <h3>Blog Website</h3>
+                    <p>A blog website where users can read articles, leave comments, and share posts.</p>
+                </div>
+                <div class="project">
+                    <h3>Calculator</h3>
+                    <p>A simple calculator application that performs basic arithmetic operations.</p>
+                </div>
+                <div class="project">
+                    <h3>Chat Application</h3>
+                    <p>A real-time chat application that allows users to send and receive messages instantly.</p>
+                </div>   
+            </div>
+        </section>
+
+        <section id="other-things-i-do-container">
+            <h1 class="section-heading">OTHER THINGS I DO</h1>
+            <br>
+            <p>Beyond frontend development, I also love building physical models of houses using cardboard and simple materials. it's a hands on hobby that sharpens my eye for design and structure, which also influences how I approach layout in web development. </p>
+            <br>
+            <a href="page2.html"><button id="house-project-button">click here to see my handmade architectural models</button></a>
+            <br>     
+        </section> 
+
+        <section id="contact-container">
+            <br>
+            <h2 class="section-heading">CONTACT</h2>
+            <br>
+            <p class="section-sub-heading">Feel free to contact me by submitting the form below and I will get back to you as soon as possible</p>
+            <form>
+                <h4>Name:</h4>
+                <input type="text" placeholder="type in your full name here">
+                <h4>Email:</h4>
+                <input type="text" placeholder="type in your email here">
+                <h4>Message:</h4>
+                <textarea rows ="10"  placeholder="type in your email here"></textarea>
+                <input style="background-color: #5e60ce;" type="submit">
+            </form>
+        </section>
+
+    </main>
+    
+    <footer>
+        <section id="socials">
+            <h2>SOCIALS</h2>
+            <br>
+            <span id = "social-icons-container">
+                <a class="social-icon" href="https://www.linkedin.com/in/uchenna-uchendu-8852a134a/"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
+                <a class="social-icon" href="https://github.com/uchenna7-prog"><i class="fa-brands fa-github fa-2xl"></i></a>
+                <a class="social-icon" href="https://x.com/DannielUche"><i class="fa-brands fa-twitter fa-2xl"></i></a>
+                <a class="social-icon" href="https://www.instagram.com/uchendu_uchenna?igsh=MXgxaDY2bXRnYnB6cw=="><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                <a class="social-icon" href="https://www.facebook.com/uchenna.uchendu.383796"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                <a class="social-icon" href="https://wa.link/m7opjb"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+                <a class="social-icon" href="https://www.tiktok.com/@uchennaudahniel?_t=ZM-8xv4KMqBxk0&_r=1"><i class="fa-brands fa-tiktok fa-2xl"></i></a>
+            </span>
+            <br>
+            <hr>
+            <p>© 2025 Uchenna Uchenna. All rights reserved.</p>
+        </section>
+        <section>
+            
+        </section>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/f7df50b970.js" crossorigin="anonymous"></script>
+
+    <script>
+        let navigationButton = document.querySelector("#navigation-button");
+        let navigationBar = document.querySelector("nav");
+        let navigationOptionContainers = document.querySelectorAll(".nav-option-container")
+        let houseModelPicturesPageBtn = document.querySelector("house-project-button")
+       
+        navigationButton.addEventListener("click",
+            function(){
+                if (navigationButton.textContent === "≡"){
+                    navigationBar.style.display = "block"
+                    navigationButton.textContent = "X"
+                }
+                else{
+                    navigationBar.style.display = "none"
+                    navigationButton.textContent = "≡"
+                }
+            }
+        )
+
+        navigationOptionContainers.forEach(element => {
+            element.addEventListener("click",
+                function(){
+                    navigationBar.style.display = "none";
+                    navigationButton.textContent = "≡"
+                }
+            )
+        });
+
+    </script>
+</body>
+</html>
