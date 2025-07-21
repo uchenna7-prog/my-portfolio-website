@@ -63,6 +63,57 @@ nav{
 .nav-option-container:hover{
     background-color: blue;
 }
+
+
+@keyframes wave{
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(10deg); }       
+    20% { transform: rotate(-10deg); }
+    30% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(-10deg); }
+    70% { transform: rotate(10deg); }
+    80% { transform: rotate(-10deg); }
+    90% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+   
+    
+}
+
+#intro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+
+}
+#emoji{
+    font-size: 30px;
+    animation-name : wave;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+#job-title-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+@keyframes blink{
+    50%{color:black;}
+    100%{color:gray;}
+}
+#cursor{
+    font-size: 5px;
+    animation-name:blink ;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
+}
+
 #profile-picture{
     border-radius: 10px;
     border: 2px solid #5e60ce;
