@@ -1,191 +1,907 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal portfolio website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
-    <link  href="personal_portfolio_website_style.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div id="profile">
-            <h4>Uchendu Uchenna</h4>
-        </div>
-        <h1 id="navigation-button">≡</h1>
-        <nav>
-            <div class="nav-option-container" >
-                <i class="fa-solid fa-house fa-xl"></i>
-                <a class="nav-option" href="#home-container"><h2>HOME</h2></a>
-            </div>
-           
-            <hr>
-            <div class="nav-option-container">
-                <i class="fa-solid fa-user fa-xl"></i>
-                <a class="nav-option" href="#about-container"><h2>ABOUT</h2></a>
-                
-            </div>
-            <hr>
-            <div class="nav-option-container">
-                <i class="fa-solid fa-screwdriver-wrench fa-xl"></i>
-                <a class="nav-option" href="#skills-container"><h2>SKILLS</h2></a>
-            </div>
-            <hr>
-            <div class="nav-option-container">
-                <i class="fa-solid fa-laptop-code fa-xl"></i>
-                <a class="nav-option" href="#projects-container"><h2>PROJECTS</h2></a>
-            </div>
-            <hr>
-             <div class="nav-option-container">
-                <i class="fa-solid fa-lightbulb fa-xl"></i>
-                <a class="nav-option" href="#other-things-i-do-container"><h2>OTHER THINGS I DO</h2></a>
-            </div>
-            <hr>
-            <div class="nav-option-container">
-                <i class="fa-solid fa-phone fa-xl"></i>
-                <a class="nav-option" href="#contact-container"><h2>CONTACT</h2></a>
-            </div>
-        </nav>
+    <title>Portfolio</title>
+    <style>
 
-    </header>
-    <main>
-        <div id="home-container">
-            <img id = "profile-picture" width="200px" src="me.jpg" alt="Profile Picture">
+      .bebas-neue-regular {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400; 
+      }
+      .cormorant-upright-light { 
+        font-family: "Cormorant Upright",serif;
+        font-weight: 300;
+      }
+      .cormorant-upright-regular {
+        font-family: "Cormorant Upright", serif;
+        font-weight: 400; 
+      }
 
-            <div id="intro">
-                <div id="emoji">👋</div>
-                <div><h2 >I am Uchenna</h2></div>
-            </div> 
-            <div id="job-title-container">
-                <h1 id="job-title" > </h1>
-                <h1 id="cursor">|</h1>
-            </div>
-         
-            <h2>passionate about building modern,interactive websites.</h2>
-        </div>
-        <section id="about-container">
-            <br>
-            <h1 class="section-heading">ABOUT ME</h1>
-            <br>
-            <p>Hello, I am Uchendu Uchenna, a frontend developer passionate about building fast, modern, and user-friendly websites. I specialize in turning creative ideas into responsive, accessible, and visually engaging web experiences using HTML, CSS, Javascript, and frameworks like React and Tailwind CSS. </p>
-            <br>
-            <p>I'm currently studying computer science at the University of Port Harcourt, where I'm deepening my understanding of programming, problem-solving, and real-world application development. My journey into frontend development began with curiousity and a drive to create - and it quickly grew into a full-blown passion.</p>
-            <br>
-            <p>I love crafting clean interfaces, experienting with animation, and constantly learning new tools to improve my craft. My ultimate goal is to become a full-stack developer and contribute to meaningful digital products that make life better for people. </p>
-            <br>
-        </section>
+      *{
+        box-sizing: border-box;
+      }
 
-        <section id="skills-container">
-            <br>
-            <h1 class="section-heading">SKILLS</h1>
-            <br>
-            <div class="tool-container">
-                <i class="fa-brands fa-html5 fa-2xl"></i>
-                <h2>HTML</h2>
-            </div>
-            <br>
-            <div class="tool-container">
-                <i class="fa-brands fa-css3-alt fa-2xl"></i>
-                <h2>CSS</h2>
-            </div>
-            <br>
-            <div class="tool-container">
-                <i class="fa-brands fa-js fa-2xl"></i>
-                <h2>Javascript</h2>
-            </div>
-            <br>
-            <div class="tool-container">
-                <i class="fa-brands fa-python fa-2xl"></i>
-                <h2>Python</h2>
-            </div>
-            <br>
-            <div class="tool-container">
-                <i class="fa-brands fa-github fa-xl"></i>
-                <h2>GitHub</h2>
-            </div>
-            <br>
-        </section>
+      *.dark-mode{
+        color:black;
+      }
 
-        <section id="projects-container">
-             <h1 class="section-heading">PROJECTS</h1>
-             <div id = "project-list-container">
-                <div class="project">
-                    <h3>Personal Portfolio</h3>
-                    <p>A personal portfolio website showcasing my skills, projects, and contact information.</p>
-                </div>
-                <div class="project">
-                    <h3>Weather App</h3>
-                    <p>A weather application that provides real-time weather updates and forecasts for any location.</p>
-                </div>
-                <div class="project">
-                    <h3>Todo List</h3>
-                    <p>A simple todo list application that allows users to add, edit, and delete tasks.</p>
-                </div>
-                <div class="project">
-                    <h3>Blog Website</h3>
-                    <p>A blog website where users can read articles, leave comments, and share posts.</p>
-                </div>
-                <div class="project">
-                    <h3>Calculator</h3>
-                    <p>A simple calculator application that performs basic arithmetic operations.</p>
-                </div>
-                <div class="project">
-                    <h3>Chat Application</h3>
-                    <p>A real-time chat application that allows users to send and receive messages instantly.</p>
-                </div>   
-            </div>
-        </section>
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+      }
 
-        <section id="other-things-i-do-container">
-            <h1 class="section-heading">OTHER THINGS I DO</h1>
-            <br>
-            <p>Beyond frontend development, I also love building physical models of houses using cardboard and simple materials. it's a hands on hobby that sharpens my eye for design and structure, which also influences how I approach layout in web development. </p>
-            <br>
-            <a href="page2.html"><button id="house-project-button">click here to see my handmade architectural models</button></a>
-            <br>     
-        </section> 
+      #mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+      }
+      #mobile-menu.active { 
+        transform: translateY(0); 
+      }
 
-        <section id="contact-container">
-            <br>
-            <h2 class="section-heading">CONTACT</h2>
-            <br>
-            <p class="section-sub-heading">Feel free to contact me by submitting the form below and I will get back to you as soon as possible</p>
-            <form>
-                <h4>Name:</h4>
-                <input type="text" placeholder="type in your full name here">
-                <h4>Email:</h4>
-                <input type="text" placeholder="type in your email here">
-                <h4>Message:</h4>
-                <textarea rows ="10"  placeholder="type in your email here"></textarea>
-                <input style="background-color: #5e60ce;" type="submit">
-            </form>
-        </section>
+      .mobile-link { 
+        color: white; 
+        text-decoration: none; 
+        font-size: 24px; 
+        font-weight: bold; 
+        letter-spacing: 1px; 
+      }
+      .mobile-link:hover { 
+        text-decoration: underline; 
+      }
 
-    </main>
+      #top-right-header-nav-container { 
+        margin-right: 10px; 
+        display: flex; 
+        gap: 15px; 
+        align-items: center;
+       }
+      .nav-btn{
+        cursor: pointer;
+      }
+     
+      body {
+        margin: 0;
+        font-family: "Cormorant Upright", serif;
+        font-size: 21px;
+        color: white;
+      }
+
+      main { 
+        position: relative; 
+      }
+
+      #home-page {
+        height: 100vh;
+        width: 100%;
+        background-image: url("background1..jpeg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 40px;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      
+      }
+
+      #home-page.dark-mode{
+        background-image:url("background2..jpeg") ;
+        color:black;
+      }
+
+      #home-page h3, #home-page h1, #home-page h6{ 
+        margin:0;
+        line-height: 1.2;
+        text-align: center;
+       }
+
+
+      #homepage-social-icons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        text-align: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .social-icon { 
+        text-decoration: none;
+        color: inherit;
+        border-radius: 50%;
+        padding: 10px;
+        font-size: 15px;
+       }
+
+      
+      @keyframes shake {
+        0%, 100% { 
+          transform: translateY(0); 
+        }
+        20% { 
+          transform: translateY(-10px); 
+        }
+        40% { 
+          transform: translateY(0); 
+        }
+        60% { 
+          transform: translateY(-5px); 
+        }
+        80% { 
+          transform: translateY(0); 
+        }
+      }
+
+
+
+      @keyframes fadeIn { 
+        from{
+          opacity:0;
+          
+        }
+        to { 
+          opacity: 1;
+        }
+       }
     
-    <footer>
-        <section id="socials">
-            <h2>SOCIALS</h2>
-            <br>
-            <span id = "social-icons-container">
-                <a class="social-icon" href="https://www.linkedin.com/in/uchenna-uchendu-8852a134a/"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a>
-                <a class="social-icon" href="https://github.com/uchenna7-prog"><i class="fa-brands fa-github fa-2xl"></i></a>
-                <a class="social-icon" href="https://x.com/DannielUche"><i class="fa-brands fa-twitter fa-2xl"></i></a>
-                <a class="social-icon" href="https://www.instagram.com/uchendu_uchenna?igsh=MXgxaDY2bXRnYnB6cw=="><i class="fa-brands fa-instagram fa-2xl"></i></a>
-                <a class="social-icon" href="https://www.facebook.com/uchenna.uchendu.383796"><i class="fa-brands fa-facebook fa-2xl"></i></a>
-                <a class="social-icon" href="https://wa.link/m7opjb"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
-                <a class="social-icon" href="https://www.tiktok.com/@uchennaudahniel?_t=ZM-8xv4KMqBxk0&_r=1"><i class="fa-brands fa-tiktok fa-2xl"></i></a>
-            </span>
-            <br>
-            <hr>
-            <p>© 2025 Uchenna Uchenna. All rights reserved.</p>
-        </section>
-        <section>
-            
-        </section>
+
+      #scroll-down-arrow {
+        position: absolute;
+        bottom: 30px;
+        font-size: 50px;
+        cursor: pointer;
+        animation: shake 1s infinite, fadeIn 2s ease forwards;
+        opacity: 0; 
+        color: white;
+      }
+      #profile-picture{
+        display: block;
+        height: 210px;
+        width:230px;
+        border: 4px solid white;
+        border-radius: 50%;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      #about-page>div{
+        width: 80%;
+       
+      }
+
+      #about-page>img{
+        margin-top: 10vh;
+      }
+
+      #about-page{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: start;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-color: rgba(0,0,0);
+        color: white;
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        z-index: 2;
+        padding: 20px 20px;
+        transition: background-color 0.4s ease, color 0.4s ease;
+
+      }
+
+
+      #projects-page,#contact-page {
+        background-color: rgba(0,0,0);
+        color: white;
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        z-index: 2;
+        padding: 20px 20px;
+        transition: background-color 0.4s ease, color 0.4s ease;
+      }
+
+      #skills-page,#services-page{
+        background-color: rgba(0,0,0);
+        color: white;
+        position: relative;
+        width: 100%;
+        z-index: 2;
+        padding: 20px 20px;
+        transition: background-color 0.4s ease, color 0.4s ease;
+
+      }
+
+      
+
+      #about-page.dark-mode, #projects-page.dark-mode, #skills-page.dark-mode,#services-page.dark-mode{
+        background-color: rgb(90, 86, 86);
+        color: #000;
+      }
+      
+      .section-heading,.title{
+        text-align: center;
+        font-family: "Bebas Neue", sans-serif;
+        
+      }
+
+      .section-heading.dark-mode,.title.dark-mode{
+        color: black;
+       }
+
+
+      #more-about-me-container{
+        padding-left: 0;
+        margin-top: 10vh;
+        list-style:none;
+      
+      }
+
+      #more-about-me-container li{
+        margin-top: 4vh;
+        
+      }
+
+      .about-me-detail{
+        font-family: "Bebas Neue", sans-serif;
+      }
+
+
+    
+
+
+
+      .skills-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 30px;
+      }
+
+      .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+      }
+     
+
+      .skill i { 
+        font-size: 40px; 
+        margin-bottom: 5px; 
+      }
+
+
+   
+
+      #services-container{
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+      }
+      .service-card{
+        width: 25vw;
+        height: 40vh;
+        text-align: center;
+        background-color: #222;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: transform 0.3s ease,background-color 0.3s ease;
+        border: 1px solid black;
+
+      
+
+      } 
+
+      .service-card:hover{
+        transform: scale(1.05);
+        background-color: #222;
+      }
+      .cut-top-left{
+        clip-path: polygon(10% 0%,100% 0%,100% 100%,0% 100%,0% 10%);
+      }
+      .cut-bottom-left{
+        clip-path: polygon(0% 0%,100% 0%,100% 100%,10% 100%,0% 90%);
+
+      }
+      .cut-top-right{
+        clip-path: polygon(10% 0%,100% 0%,100% 100%,0% 100%,0% 10%);
+      }
+      .service-btn{
+        margin-top: 10px;
+        margin-bottom: 15px;
+        background-color: transparent;
+        border: 1px solid blue;
+        color: blue;
+        padding: 6px 14px;
+        font-size: 0.8 rem;
+        cursor: pointer;
+        transition: background-color 0.3s,color 0.3s;
+      }
+      .service-btn:hover{
+        background-color: blue;
+        color: white;
+      }
+
+      @keyframes move {
+        0%{
+          transform: translateX(0);
+
+        }
+        20%{
+          transform: translateX(5px);
+        }
+        40%{
+          transform: translateX(-5px);
+        }
+        60%{
+          transform: translateX(5px);
+        }
+        80%{
+          transform: translateX(-5px);
+        }
+
+        100%{
+          transform: translateX(0);
+
+        }
+        
+      }
+      .project-container{
+        font-size: medium;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        width: 25vw;
+        min-height: 90vh;
+        border: 1px solid white;
+        border-radius: 10px;
+      }
+
+      .project-pic{
+        border-radius: 10px;
+        border: 1px solid white;
+        width: 25vw;
+        height: 55vh;
+
+      }
+      .project-description{
+        text-align: center;
+      }
+    
+      .view-project-container{
+        display: flex;
+        align-items: center;
+        gap:8px;
+
+      }
+      #projects-page > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+     
+   
+        
+      }
+  
+      .view-project-arrow{
+        cursor: pointer;
+        animation: move 2s infinite;
+      
+      }
+
+      .technologies-used-container{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+      }
+      .technologies-used-container > div{
+        border: 1px solid white;
+        border-radius: 5px;
+        background-color: #222;
+      }
+
+     
+
+      .tech-stack-and-skill-level-container{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        width: 40vw;
+        background-color: #222;
+        background-attachment:scroll;
+  
+      }
+
+      progress{
+        width: 50%;
+        margin: 0 auto;
+      
+        appearance: none;
+      
+
+      }
+
+      progress::-webkit-progress-bar{
+        background-color:gray;
+        border-radius: 10px;
+        height: 7px;
+
+      }
+      progress::-webkit-progress-value{
+        background-color: rgb(3,3,90);
+        border-radius: 10px;
+        height: 7px;
+      }
+      progress::-moz-progress-bar{
+        background-color: gray;
+        border-radius: 10px;
+        height: 7px;
+        
+      }
+
+
+      #footer-page{
+        display:flex;
+        flex-direction: column;
+        font-size: 18px;
+        background:linear-gradient(to top,rgb(3,3,90),black);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        z-index: 2;
+        padding: 10px;
+        transition: background-color 0.4s ease, color 0.4s ease;
+      }
+
+      #footer-page.dark-mode{
+        background: linear-gradient(to top, white,black);
+       font-weight:bolder;
+      }
+
+      #back-to-top-text-and-icon-container{
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        width: 100%;
+        gap: 10px;
+        text-decoration: none; 
+        color: white; 
+        margin-top: 12vh;
+
+      }
+      #arrow-upward{
+        border-radius: 50%;
+        border-color: white;
+        border-width: 2px;
+        border-style: solid;
+        cursor: pointer;
+      }
+
+
+      #footer-main-text-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        
+      }
+      #footer-main-text-container h1{
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 60px;
+      }
+      #footer-main-text-container h3{
+        font-size: 20px;
+      }
+
+      #footer-page h1, #footer-page h3{
+        margin: 0;
+        line-height: 1.2;
+        text-align: center;
+      }
+      
+      #footer-bottom-section-container{
+        margin-top: auto;
+      
+      }
+
+
+      #footer-contact-details-container{
+        display: flex;
+        flex-direction: row;
+        align-items:end;
+
+      }
+
+      #footer-page p ,#footer-social-icons-container{
+        margin-bottom: 10px;
+        margin-top: 3px;
+       
+      }
+   
+      @media(max-width: 600px){
+          #about-page>div{
+            width: 100%;
+       
+      }
+
+        .tech-stack-and-skill-level-container{
+          width:40vw;
+        }
+        #homepage-social-icons-container { font-size: 12px; }
+        #home-page { font-size: 30px; }
+        #footer-page h1{
+          font-size: 40px; 
+
+        }
+        body { font-size: 17px; }
+        h1 { font-size: 30px; }
+
+       
+        .skills-container { 
+        
+          display: grid; 
+          grid-template-columns: repeat(2, 1fr); 
+          gap: 20px; 
+          justify-items: center; 
+        }
+
+        #service-container{
+          flex-direction: column;
+        }
+        .service-card{
+          width: 80vw;
+          height: auto;
+          
+          
+        }
+        .project-pic{
+          width: 80vw;
+          height: auto;
+          border: 1px solid white;
+
+          }
+
+      .project-container{
+        border-style: none;
+        width: 80vw;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid white;
+        background-color: black;
+      }
+
+      #footer-main-text-container h1{
+        font-size: 40px;
+      }
+      #footer-main-text-container h3{
+        font-size: 16px;
+      }
+      }
+
+      .form-entry{
+        background-image: url("background-image1.jpeg");
+        background-attachment: scroll;
+        background-position: center;
+        background-size: cover;
+        border: 1px solid white;
+        border-radius: 5px;
+        width: 100%;
+        color: white;
+      }
+
+      form{
+        width: 80vw;
+        margin: 0 auto;
+      }
+    </style>
+
+    <script src="https://kit.fontawesome.com/f7df50b970.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <span id="home-button" class="material-icons nav-btn">home</span>
+      <nav id="top-right-header-nav-container">
+        <span id="contrast-button" class="material-icons nav-btn">light_mode</span>
+        <span id="menu-button" class="material-icons nav-btn">menu</span>
+      </nav>
+    </header>
+
+    <div id="mobile-menu">
+      <a href="#home-page" class="mobile-link">Home</a>
+      <a href="#about-page" class="mobile-link">About</a>
+      <a href="#projects-page" class="mobile-link">Projects</a>
+      <a href="#skills-page" class="mobile-link">Skills</a>
+      <a href="#" class="mobile-link">Contact</a>
+    </div>
+
+  <main>
+    <section id="home-page">
+      <h3>HI, I'M </h3>
+      <h1>UCHENNA UCHENDU.</h1>
+      <h1>A FRONT-END Web Developer.</h1>
+      <h6>I build fast, modern, and user-friendly websites.</h6>
+      <button class="service-btn">Resume</button>
+      <span id="homepage-social-icons-container">
+        <a class="social-icon" href="#"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
+        <a class="social-icon" href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+        <a class="social-icon" href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+      </span>
+      <span id="scroll-down-arrow" class="material-icons">keyboard_arrow_down</span>
+    </section>
+
+  <section id="about-page">
+   
+    <img id ="profile-picture" src="profile1.jpg">
+    <div>
+      <h2 class="section-heading">ABOUT ME.</h2>
+      <p>I am a front-end developer passionate about building digital experiences that feel <strong>smooth, purposeful, and alive.</strong></p>
+      <p>I specialize in turning creative ideas into <strong>responsive, accessible,</strong> and <strong>visually engaging</strong> web experiences using <strong>HTML, CSS, Javascript,</strong> and frameworks like <strong>React and Tailwind CSS.</strong></p>
+      <p>I'm currently studying <strong>Computer Science</strong> at the University of Port Harcourt, Nigeria.</p>
+ 
+    
+      <ul id="more-about-me-container">
+        <li><span class="about-me-detail">Experience: </span>1+ years.</li>
+        <li><span class="about-me-detail">Degree: </span>Bsc in Computer Science (in 3 years time).</li>
+        <li><span class="about-me-detail">Location:</span> Port Harcourt, Nigeria.</li>
+        <li><span class="about-me-detail">Nationality:</span> Nigerian.</li>
+        <li><span class="about-me-detail">Interests:</span> Web Development, Artificial Intelligence.</li>
+        <li><span class="about-me-detail">Hobbies:</span> Coding side projects, listening to good music, designing architectural house models.</li>
+      </ul>
+    </div>
+  </section>
+  <section id="services-page">
+    <h2 class="section-heading">SERVICES</h2>
+    <div id="services-container">
+      <div class="service-card cut-top-left">
+        <h3 class="title">FRONTEND <i class="fa fa-code" aria-hidden="true"></i></h3>
+        I create modern, responsive, and fast web interfaces with HTML, CSS, and JavaScript frameworks.
+        <button class="service-btn">Contact Me</button>
+      </div>
+      <div class="service-card cut-bottom-left">
+        <h3 class="title">BACKEND</h3>
+        I build secure and scalable backend systems using python and modern web technologies.
+        <button class="service-btn">Contact Me</button>
+      </div>
+      <div class="service-card cut-top-right">
+        <h3 class="title">AI SOLUTIONS</h3>
+        I Develop AI-powered applications, intelligent chatbots, and automation tools.
+        <button class="service-btn">Contact Me</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills-page">
+  <h2 class="section-heading">TECH STACKS & SKILL LEVEL </h2>
+  <div class="skills-container">
+    <div class="tech-stack-and-skill-level-container">
+        <div class="skill"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+        <progress value="90" max="100"></progress>
+    </div>
+
+    <div class="tech-stack-and-skill-level-container">
+      <div class="skill"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+      <progress value="80" max="100"></progress>
+    </div>
+    <div class="tech-stack-and-skill-level-container">
+      <div class="skill"><i class="fa-brands fa-js-square"></i><span>JavaScript</span></div>
+      <progress value="70" max="100"></progress>
+    </div>
+    <div class="tech-stack-and-skill-level-container">
+      <div class="skill"><i class="fa-brands fa-python"></i><span>Python</span></div>
+      <progress value="70" max="100"></progress>
+    </div>
+   
+    <div class="tech-stack-and-skill-level-container">
+      <div class="skill"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+      <progress value="70" max="100"></progress>
+    </div>
+    
+  </div>
+  </section>
+
+    <section id="projects-page">
+      <h2 class="section-heading">RECENT PROJECTS.</h2>
+      <div>
+    
+        <div class="project-container">
+          <img src="portfolio-website.png" alt="Project 1" class="project-pic">
+
+          <h3 class="title">PORTFOLIO WEBSITE</h3>
+          <div class="technologies-used-container">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>python</div>
+          </div>
+          <p class="project-description">A responsive personal website showcasing skills, projects, and contact information.</p>
+
+          <a class="view-project-container">
+            <span>view project</span>
+            <span class="material-icons view-project-arrow">arrow_forward</span>
+          </a>
+        </div>
+    
+        <div class="project-container">
+          <img src="cgpa-calculator.png" alt="Project 2" class="project-pic">
+          <h3 class="title">CGPA CALCULATOR  (5.0 SCALE)</h3>
+          <div class="technologies-used-container">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+          </div>
+          <p class="project-description">Web app that calculates GPA/CGPA automatically and visualizes academic progress.</p>
+          <a class="view-project-container">
+            <span>view project</span>
+            <span class="material-icons view-project-arrow">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="project-container">
+          <img src="gpaCalc.jpg" alt="Project 4" class="project-pic">
+          <h3 class="title">Image Editor App</h3>
+          <p class="project-description">A desktop image editor with filters, cropping, and basic AI-powered enhancements.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact-page">
+      <h2 class="section-heading">CONTACT.</h2>
+      
+      <form>
+        <p>Get in touch or shoot me an email directly on <strong>uchenduuchenna7@gmail.com by submitting the form below</strong></p>
+          <h4>Name:</h4>
+          <input type="text" placeholder="Name" class="form-entry">
+          <h4>Email:</h4>
+          <input type="text" placeholder="Email" class="form-entry">
+          <h4>Message:</h4>
+          <textarea rows ="10"  placeholder="Message" class="form-entry"></textarea>
+          <button>Send Message</button>
+      </form>
+
+
+
+    </section>
+
+  
+    <footer id="footer-page">
+    
+      <a id="back-to-top-text-and-icon-container" href="#home-page">
+        <span class="material-icons" id="arrow-upward">arrow_upward</span> Back to top
+      </a>
+    
+      <div id="footer-main-text-container">
+        <h1>LET'S CREATE </h1>
+        <h1>SOMETHING AMAZING</h1>
+        <h3>Need an intelligent system, a sleek front-end, or powerful backend? I've got you covered.</h3>
+        <button class="service-btn">Contact Me</button>
+      </div>
+    
+      <div id="footer-bottom-section-container">
+        <div id="footer-contact-details-container">
+          <p>uche7@gmail.com</p>
+          <span id="footer-social-icons-container">
+            <a class="social-icon" href="#"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
+            <a class="social-icon" href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+            <a class="social-icon" href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></i></a>
+          </span>
+        </div>
+        <p>© 2025 Uchendu Uchenna. All rights reserved.</p>
+      </div>
+
 
     </footer>
-    <script src="https://kit.fontawesome.com/f7df50b970.js" crossorigin="anonymous"></script>
-    <script src="personal_portfolio_website_script.js" ></script>
-</body>
+  </main>
+
+  <script>
+ 
+  const contrastButton = document.getElementById("contrast-button");
+  const aboutSection = document.getElementById("about-page");
+  const projectsSection = document.getElementById("projects-page");
+  const skillsSection = document.getElementById("skills-page");
+  const homePageSection = document.getElementById("home-page")
+  const servicesSection = document.getElementById("services-page")
+  const footerSection = document.getElementById("footer-page")
+  const everything =document.querySelector("*")
+
+  contrastButton.addEventListener("click", () => {
+    if(homePageSection.classList.contains("dark-mode")){
+      homePageSection.classList.toggle("dark-mode")
+      aboutSection.classList.toggle("dark-mode")
+      projectsSection.classList.toggle("dark-mode")
+      skillsSection.classList.toggle("dark-mode")
+      servicesSection.classList.toggle("dark-mode")
+      footerSection.classList.toggle("dark-mode")
+    }
+
+    else{
+      homePageSection.classList.toggle("dark-mode")
+      aboutSection.classList.toggle("dark-mode")
+      projectsSection.classList.toggle("dark-mode")
+      skillsSection.classList.toggle("dark-mode")
+      servicesSection.classList.toggle("dark-mode")
+      footerSection.classList.toggle("dark-mode")
+
+
+    }
+
+  });
+
+  
+  
+  const menuButton = document.getElementById("menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+    if(mobileMenu.classList.contains("active")){
+      menuButton.textContent =  "close";
+
+    }
+    else{
+      menuButton.textContent =  "menu";
+
+    }
+  });
+
+
+ 
+
+
+  </script>
+
+  </body>
 </html>
