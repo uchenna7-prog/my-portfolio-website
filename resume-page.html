@@ -17,6 +17,46 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js"></script>
     <script scr="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.worker.min.js"></script>
+
+  <style>
+   body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.pdf-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.pdf-container {
+  width: 85vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #111;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  padding: 10px;
+}
+
+#resume-pdf-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+
+
+
+
+</style>
   </head>
   <body>
 
@@ -74,41 +114,47 @@
       </div>
     </footer>
   </main>
-
     <script>
       const resumePdfFilePath = "resume.pdf";
 
-    
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.worker.min.js";
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.worker.min.js";
 
-      let pdfDoc = null;
-      let pageNum = 1;
-      let scale = 1.5;
-      const canvas = document.getElementById("resume-pdf-canvas");
-      const ctx = canvas.getContext("2d");
+let pdfDoc = null;
+let pageNum = 1;
+let scale = 1.5;
+const canvas = document.getElementById("resume-pdf-canvas");
+const ctx = canvas.getContext("2d");
 
-    
-      async function renderPage(num) {
-        const page = await pdfDoc.getPage(num);
-        const viewport = page.getViewport({ scale });
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
+async function renderPage(num) {
+  const page = await pdfDoc.getPage(num);
+  const viewport = page.getViewport({ scale });
+  canvas.height = viewport.height;
+  canvas.width = viewport.width;
 
-        const renderContext = {
-          canvasContext: ctx,
-          viewport: viewport,
-        };
+  const renderContext = {
+    canvasContext: ctx,
+    viewport: viewport,
+  };
 
-        await page.render(renderContext).promise;
-      }
+  await page.render(renderContext).promise;
+}
 
-    
-      pdfjsLib.getDocument(resumePdfFilePath).promise.then((pdf) => {
-      pdfDoc = pdf;
-      renderPage(pageNum);
-      });
-  </script>
+pdfjsLib.getDocument(resumePdfFilePath).promise.then((pdf) => {
+  pdfDoc = pdf;
+  renderPage(pageNum);
+});
 
+
+
+
+
+   
+
+
+</script>
+
+   
   </body>
 
 </html>
