@@ -683,10 +683,6 @@ background-color:white;
   }
 
 
-  #about-page, .form-entry,#footer-page,#skills-page,#services-page,#projects-page,#contact-page{
-  background-image: url("black-background.jpeg");
-  }
-
   #socials-and-resume-btn-container{
   flex-direction: column;
   }
