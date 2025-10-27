@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uchendu uchenna Portfolio website</title>
+    
+    <link href="index-style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f7df50b970.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.min.js"></script>
+    <script scr="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.worker.min.js"></script>
+  </head>
+  <body>
+
+    <header class="change-text-color-container">
+      <span id="home-button" class="material-icons nav-btn change-border-color-container">home</span>
+      <nav id="top-right-header-nav-container">
+        <span id="contrast-button" class="material-icons nav-btn change-border-color-container">light_mode</span>
+        <span id="menu-button" class="material-icons nav-btn change-border-color-container">menu</span>
+      </nav>
+    </header>
+
+    <div id="mobile-menu" class="change-background-color-container">
+      <a href="#home-page" class="mobile-link change-text-color-container">Home</a>
+      <a href="#about-page" class="mobile-link change-text-color-container">About</a>
+      <a href="#projects-page" class="mobile-link change-text-color-container">Projects</a>
+      <a href="#skills-page" class="mobile-link change-text-color-container">Skills</a>
+      <a href="#" class="mobile-link change-text-color-container">Contact</a>
+    </div>
+
+  <main>
+      <section>
+          <h2 class="section-heading">MY RESUME</h2>
+          <canvas id="resume-pdf-canvas"></canvas>
+      </section>
+    
+
+    <footer id="footer-page" class="change-background-image-container">
+    
+      <a id="back-to-top-text-and-icon-container" href="#home-page" class="change-text-color-container">
+        <span class="material-icons change-border-color-container" id="arrow-upward">arrow_upward</span>
+        <span>Back to top</span>
+      </a>
+    
+      <div id="footer-main-text-container" class="change-text-color-container">
+        <h1>LET'S CREATE </h1>
+        <h1>SOMETHING AMAZING.</h1>
+        <h3>Ready to craft modern, interactive ,and user-friendly interfaces?.</h3>
+        <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
+      </div>
+    
+      <div id="footer-bottom-section-container" class="change-text-color-container">
+        <div id="footer-contact-details-container">
+          <span id="footer-social-icons-container">
+            <a class="social-icon" href="#"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
+            <a class="social-icon" href="#"><i class="fa-brands fa-github fa-lg"></i></a>
+            <a class="social-icon" href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></i></a>
+          </span>
+            <div id="footer-email-container">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:uchenduuchenna7@gmail.com" class="change-text-color-container">uchenduuchenna7@gmail.com</a>
+            </div>
+            <span><i class="fa-brands fa-whatsapp"></i> +234 9079116980</span>
+        </div>
+        <p>© 2025 Uchendu Uchenna. All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+    <script>
+      const resumePdfFilePath = "resume.pdf";
+
+    
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.10.111/pdf.worker.min.js";
+
+      let pdfDoc = null;
+      let pageNum = 1;
+      let scale = 1.5;
+      const canvas = document.getElementById("resume-pdf-canvas");
+      const ctx = canvas.getContext("2d");
+
+    
+      async function renderPage(num) {
+        const page = await pdfDoc.getPage(num);
+        const viewport = page.getViewport({ scale });
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        const renderContext = {
+          canvasContext: ctx,
+          viewport: viewport,
+        };
+
+        await page.render(renderContext).promise;
+      }
+
+    
+      pdfjsLib.getDocument(resumePdfFilePath).promise.then((pdf) => {
+      pdfDoc = pdf;
+      renderPage(pageNum);
+      });
+  </script>
+
+  </body>
+
+</html>
