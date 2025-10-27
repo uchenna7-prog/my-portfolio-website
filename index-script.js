@@ -30,9 +30,11 @@ backToTopTextAndIconContainer.addEventListener("click",e=>{
 })
 
 contrastButton.addEventListener("click", () => {
-  contrastButton.textContent = "light_mode"
+
   if(darkMode){
     darkMode = false
+    contrastButton.textContent="dark_mode"
+
 
     sendButton.classList.toggle("light-mode")
     homePage.classList.toggle("light-mode")
@@ -61,10 +63,9 @@ contrastButton.addEventListener("click", () => {
   }
 
   else{
-    darkMode = true
-
-
-    sendButton.classList.toggle("light-mode")
+    darkMode = true                  
+    contrastButton.textContent="light_mode"
+ sendButton.classList.toggle("light-mode")
     homePage.classList.toggle("light-mode")
     mobileMenu.classList.toggle("light-mode")
     changeBorderColorContainers.forEach(container=>{
