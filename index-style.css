@@ -1,7 +1,6 @@
 
 *{
-box-sizing: border-box;
-
+  box-sizing: border-box;
 }
 
 
@@ -391,6 +390,7 @@ transform: translateX(0);
 
 }
 .project-container{
+
 font-size: medium;
 display: flex; 
 flex-direction: column; 
@@ -677,12 +677,9 @@ background-color:white;
 
 
 @media(max-width: 600px){
-
   .t-line{
-  font-size:small;
+    font-size: medium;
   }
-
-
   #socials-and-resume-btn-container{
   flex-direction: column;
   }
@@ -769,7 +766,7 @@ background-color:white;
   }
 
   #footer-bottom-section-container{
-  font-size: small;
+  font-size: medium;
   }
   }
 
