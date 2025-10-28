@@ -716,7 +716,7 @@ background-color:white;
 
   .project-pic{
     width: 80vw;
-    height: auto;
+    height: max-content;
   }
 
   }
