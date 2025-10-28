@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap" rel="stylesheet">
   
   </head>
+
   <body>
 
     <header class="change-text-color-container">
@@ -27,244 +28,225 @@
     </header>
 
     <div id="mobile-menu" class="change-background-color-container">
-      <a href="#home-page" class="mobile-link change-text-color-container">Home</a>
-      <a href="#about-page" class="mobile-link change-text-color-container">About</a>
-      <a href="#projects-page" class="mobile-link change-text-color-container">Projects</a>
-      <a href="#skills-page" class="mobile-link change-text-color-container">Skills</a>
-      <a href="#" class="mobile-link change-text-color-container">Contact</a>
+      <a href="#home-page" class="mobile-menu-option change-text-color-container">Home</a>
+      <a href="#about-page" class="mobile-menu-option change-text-color-container">About</a>
+      <a href="#services-page" class="mobile-menu-option change-text-color-container">Services</a>
+      <a href="#skills-page" class="mobile-menu-option change-text-color-container">Skills</a>
+      <a href="#experience-page" class="mobile-menu-option change-text-color-container">Resume Summary</a>
+      <a href="#skills-page" class="mobile-menu-option change-text-color-container">Skills</a>
+      <a href="#contact-page" class="mobile-menu-option change-text-color-container">Contact</a>
     </div>
 
-  <main>
-    <section id="home-page" class="change-background-image-container change-text-color-container">
-      <div>
-        <h3>HI, I'M </h3>
-        <h1>UCHENNA.</h1>
-        <h6>FRONT-END Web Developer | CS Student.</h6>
-        <div id="socials-and-resume-btn-container">
-            <span id="homepage-social-icons-container">
-              <a class="social-icon" href="#"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
-              <a class="social-icon" href="#"><i class="fa-brands fa-github fa-lg"></i></a>
-              <a class="social-icon" href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
-              <a class="social-icon" href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
-        
-            </span>
-            <button id="resume-button" class="cut-bottom-left change-text-color-container change-button-color-container" onclick="window.location.href='resume-page.html'">Résumé</button>
+    <main>
+
+      <section id="home-page" class="change-background-image-container change-text-color-container">
+
+        <div>
+          <h3>HI, I'M </h3>
+          <h1>UCHENNA.</h1>
+          <h6>FRONT-END Web Developer | CS Student.</h6>
+          <div id="socials-and-resume-btn-container">
+              <span id="homepage-social-icons-container">
+                <a class="social-icon" href="https://www.linkedin.com/in/uchenna-uchendu-b2a0a8307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andriod_app"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
+                <a class="social-icon" href="https://github.com/uchenna7-prog"><i class="fa-brands fa-github fa-lg"></i></a>
+                <a class="social-icon" href="https://x.com/?utm_source=homescreen&utm_medium=shortcut"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+                <a class="social-icon" href="https://www.facebook.com/uchenna.uchendu.383796"><i class="fa-brands fa-facebook fa-lg"></i></a>
+              </span>
+              <button id="resume-button" class="cut-bottom-left change-text-color-container change-button-color-container" onclick="window.location.href='resume-page.html'">Résumé</button>
+          </div>
         </div>
+        <span id="scroll-down-arrow" class="material-icons change-text-color-container">keyboard_arrow_down</span>
+
+      </section>
+
+      <section id="about-page" class="change-background-image-container">
+        <div id="profile-picture-container">
+          <img id ="profile-picture" src="profile-img.jpg" class="change-border-color-container">
+        </div>
+        <div id="about-page-text-container" class="change-text-color-container">
+          <h1 class="section-heading change-text-color-container">ABOUT ME.</h1>
+          <p>I am Uchendu Uchenna, a passionate Frontend Developer based in Port Harcourt, Nigeria. I am currently studying Computer Science at the university of Port Harcourt, where I am building my problem solving skills and deepening my understanding of how technology works.</p>
+          <p>I am currently seeking internship opportunities and freelance projects where I can apply my skills, learn from experienced developers, and contribute to meaningful work. If you are looking for a dedicated, eager-to-learn developer who brings both technical ability and genunine enthusiasm to the table, Let's connect.</p>
+        </div>
+      </section>
+
+      <section id="services-page" class="change-background-image-container change-text-color-container">
+        <h1 class="section-heading change-text-color-container">SERVICES.</h1>
+        <div id="services-container">
+          <div class="service-card change-text-color-container change-background-color-container ">
+            <h3 class="title change-text-color-container">FRONTEND <i class="fa fa-code" aria-hidden="true"></i></h3>
+            I create modern, responsive, and fast web interfaces with HTML, CSS, and JavaScript frameworks.
+            <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
+          </div>
+          <div class="service-card change-text-color-container change-background-color-container">
+            <h3 class="title change-text-color-container">FREELANCE</h3>
+            I am available for freelance work to offer reliable and high-quality website development.
+            <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
+          </div>
+          <div class="service-card change-text-color-container change-background-color-container">
+            <h3 class="title change-text-color-container">INTERNSHIP</h3>
+            I am open to join a team as an intern and contribute to creative and functional web solutions.
+            <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills-page" class="change-background-image-container">
+      <h2 class="section-heading change-text-color-container">TOOLS I USE. </h2>
+      <div class="skills-container">
+        <div class="skill change-text-color-container"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
+        <div class="skill change-text-color-container"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
+        <div class="skill change-text-color-container"><i class="fa-brands fa-js-square"></i><span>JavaScript</span></div>
+        <div class="skill change-text-color-container"><i class="fa-brands fa-python"></i><span>Python</span></div>
+        <div class="skill change-text-color-container"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+      </div>
+      </section>
+
+      <section id="projects-page" class="change-background-image-container">
+        <h2 class="section-heading change-text-color-container">RECENT PROJECTS.</h2>
+        <div>
       
-      </div>
-   
-      <span id="scroll-down-arrow" class="material-icons change-text-color-container">keyboard_arrow_down</span>
-    </section>
+          <div class="project-container change-border-color-container change-text-color-container change-background-color-container">
+            <img src="portfolio-website.png" alt="Project 1" class="project-pic change-border-color-container">
 
-  <section id="about-page" class="change-background-image-container">
-   
-    <img id ="profile-picture" src="profile-img.jpg" class="change-border-color-container">
-    <div class="change-text-color-container">
-      <h1 class="section-heading change-text-color-container">ABOUT ME.</h1>
-      <p>I am Uchendu Uchenna, a passionate Frontend Developer based in Port Harcourt, Nigeria. I am currently studying Computer Science at the university of Port Harcourt, where I am building my problem solving skills and deepening my understanding of how technology works.</p>
-      <p>I am currently seeking internship opportunities and freelance projects where I can apply my skills, learn from experienced developers, and contribute to meaningful work. If you are looking for a dedicated, eager-to-learn developer who brings both technical ability and genunine enthusiasm to the table, Let's connect.</p>
-
-    </div>
-  </section>
-  <section id="services-page" class="change-background-image-container change-text-color-container">
-    <h1 class="section-heading change-text-color-container">SERVICES.</h1>
-    <div id="services-container">
-      <div class="service-card change-text-color-container change-background-color-container ">
-        <h3 class="title change-text-color-container">FRONTEND <i class="fa fa-code" aria-hidden="true"></i></h3>
-        I create modern, responsive, and fast web interfaces with HTML, CSS, and JavaScript frameworks.
-        <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
-      </div>
-      <div class="service-card change-text-color-container change-background-color-container">
-        <h3 class="title change-text-color-container">FREELANCE</h3>
-        I am available for freelance work to offer reliable and high-quality website development.
-        <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
-      </div>
-      <div class="service-card change-text-color-container change-background-color-container">
-        <h3 class="title change-text-color-container">INTERNSHIP</h3>
-        I am open to join a team as an intern and contribute to creative and functional web solutions.
-        <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills-page" class="change-background-image-container">
-  <h2 class="section-heading change-text-color-container">TOOLS I USE. </h2>
-  <div class="skills-container">
-   
-    <div class="skill change-text-color-container"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
-    <div class="skill change-text-color-container"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
-    <div class="skill change-text-color-container"><i class="fa-brands fa-js-square"></i><span>JavaScript</span></div>
-    <div class="skill change-text-color-container"><i class="fa-brands fa-python"></i><span>Python</span></div>
-    <div class="skill change-text-color-container"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
-
-    
-  </div>
-  </section>
-
-    <section id="projects-page" class="change-background-image-container">
-      <h2 class="section-heading change-text-color-container">RECENT PROJECTS.</h2>
-      <div>
-    
-        <div class="project-container change-border-color-container change-text-color-container change-background-color-container">
-          <img src="portfolio-website.png" alt="Project 1" class="project-pic change-border-color-container">
-
-          <h3 class="title change-text-color-container">PORTFOLIO WEBSITE</h3>
-          <div class="technologies-used-container">
-            <div class="change-border-color-container">HTML</div>
-            <div class="change-border-color-container">CSS</div>
-            <div class="change-border-color-container">JavaScript</div>
-            <div class="change-border-color-container">python</div>
-          </div>
-          <p class="project-description">A responsive personal website showcasing skills, projects, and contact information.</p>
-
-          <div class="view-project-container"> 
-            <a class="change-text-color-container">view project</a>
-            <span class="material-icons change-text-color-container">open_in_new</span>
-          </div>
-        </div>
-    
-        <div class="project-container change-border-color-container change-text-color-container change-background-color-container">
-          <img src="cgpa-calculator.png" alt="Project 2" class="project-pic change-border-color-container">
-          <h3 class="title change-text-color-container">CGPA CALCULATOR  (5.0 SCALE)</h3>
-          <div class="technologies-used-container">
-            <div class="change-border-color-container">HTML</div>
-            <div class="change-border-color-container">CSS</div>
-            <div class="change-border-color-container">JavaScript</div>
-          </div>
-          <p class="project-description">Web app that calculates GPA/CGPA automatically and visualizes academic progress.</p>
-          <div class="view-project-container"> 
-            <a class="change-text-color-container">view project</a>
-            <span class="material-icons change-text-color-container">open_in_new</span>
-          </div>
-       
-        </div>
-
-        <div class="project-container change-border-color-container change-text-color-container change-background-color-container">
-          <img src="image-editor.jpeg" alt="Project 3" class="project-pic change-border-color-container">
-          <h3 class="title change-text-color-container">IMAGE EDITOR APP</h3>
-          <div class="technologies-used-container">
-            <div class="change-border-color-container">HTML</div>
-            <div class="change-border-color-container">CSS</div>
-            <div class="change-border-color-container">JavaScript</div>
-            <div class="change-border-color-container">python</div>
-          </div>
-          <p class="project-description">A desktop image editor with filters, cropping, and basic AI-powered enhancements.</p>
-          <div class="view-project-container"> 
-            <a class="change-text-color-container">view project</a>
-            <span class="material-icons change-text-color-container">open_in_new</span>
-          </div>
-        
-        </div>
-
-      </div>
-
-        <div class="see-more-text-and-icon-container">
-          <span class="material-icons view-more-arrow change-text-color-container">arrow_forward</span>
-          
-          <a href="project-page.html" class="change-text-color-container">See More Projects</a>
- 
-        </div>
-   
-
-    </section>
-
-    <section id="experience-page" class="change-background-image-container">
-      <h2 class="section-heading change-text-color-container">RESUME SUMMARY</h2>
-
-      <div id="time-line" class="change-text-color-container">
-        <div class="resume-section-heading-container">
-          <div class="t-circle change-border-color-container"></div>
-          <div>WORK EXPERIENCE</div>
-        </div>
-        
-        <div class="t-line change-border-color-container">
-          <p>FRONT-END WEB DEVELOPER (FREELANCE)</p>
-          <p>January 2024 - Present</p>
-          <p>Building responsive and user-friendly websites using HTML, CSS, and JavaScript. Focused on creating modern designs and clean, maintainable code.</p>
-        </div>
-
-        <div class="resume-section-heading-container">
-          <div class="t-circle change-border-color-container"></div>
-          <div>EDUCATION</div>
-        </div>
-        <div class="t-line change-border-color-container">
-          <p>B.Sc. IN COMPUTER SCIENCE</p>
-          <p>University of Port Harcourt | 2024 - Present</p>
-          <p>Pursuing a Computer Science degree with interests in Web development and Artificial Intelligence.</p>
-        </div>
-        <div class="resume-section-heading-container">
-          <div class="t-circle change-border-color-container"></div>
-          <div>LANGUAGES</div>
-        </div>
-        <div class="t-line change-border-color-container">
-          <ul>
-            <li>English (Fluent)</li>
-            <li>Igbo (Native)</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="see-more-text-and-icon-container">
-        <span class="material-icons view-more-arrow change-text-color-container">arrow_forward</span>
-        <a href="resume-page.html" class="change-text-color-container">Proceed to Full Resume</a>
-      
-      </div>
-     
-
-    </section>
-
-    <section id="contact-page" class="change-background-image-container">
-      <h2 class="section-heading change-text-color-container">CONTACT.</h2>
-      
-      <form class="change-text-color-container">
-        <p>Want to work together or have a question? Get in touch - or email me directly at <a href="mailto:uchenduuchenna7@gmail.com"><strong>uchenduuchenna7@gmail.com</strong></a> by submitting the form below.</p>
-          <input type="text" placeholder="Name" class="form-entry change-text-color-container change-border-color-container change-background-image-container">
-          <input type="text" placeholder="Email" class="form-entry change-text-color-container change-border-color-container change-background-image-container">
-          <textarea rows ="20"  placeholder="Message" class="form-entry change-text-color-container change-border-color-container change-background-image-container"></textarea>
-          <button id="send-button" class="change-text-color-container">
-            <span id="send-button-text" class="change-text-color-container"><i class="fa fa-paper-plane" aria-hidden="true"></i>Send Message</span>
-          </button>
-      </form>
-
-
-
-    </section>
-   
-
-  
-    <footer id="footer-page" class="change-background-image-container">
-    
-      <a id="back-to-top-text-and-icon-container" href="#home-page" class="change-text-color-container">
-        <span class="material-icons change-border-color-container" id="arrow-upward">arrow_upward</span>
-        <span>Back to top</span>
-      </a>
-    
-      <div id="footer-main-text-container" class="change-text-color-container">
-        <h1>LET'S CREATE </h1>
-        <h1>SOMETHING AMAZING.</h1>
-        <h3>Ready to craft modern, interactive ,and user-friendly interfaces?.</h3>
-        <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
-      </div>
-    
-      <div id="footer-bottom-section-container" class="change-text-color-container">
-        <div id="footer-contact-details-container">
-          <span id="footer-social-icons-container">
-            <a class="social-icon" href="#"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
-            <a class="social-icon" href="#"><i class="fa-brands fa-github fa-lg"></i></a>
-            <a class="social-icon" href="#"><i class="fa-brands fa-x-twitter fa-lg"></i></i></a>
-          </span>
-            <div id="footer-email-container">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <a href="mailto:uchenduuchenna7@gmail.com" class="change-text-color-container">uchenduuchenna7@gmail.com</a>
+            <h3 class="title change-text-color-container">PORTFOLIO WEBSITE</h3>
+            <div class="technologies-used-container">
+              <div class="change-border-color-container">HTML</div>
+              <div class="change-border-color-container">CSS</div>
+              <div class="change-border-color-container">JavaScript</div>
+              <div class="change-border-color-container">python</div>
             </div>
-            <span><i class="fa-brands fa-whatsapp"></i> +234 9079116980</span>
-        </div>
-        <p>© 2025 Uchendu Uchenna. All rights reserved.</p>
-      </div>
-    </footer>
-  </main>
+            <p class="project-description">A responsive personal website showcasing skills, projects, and contact information.</p>
+            <a class="view-project-container change-text-color-container" href="https://uchenna7-prog.github.io/my-portfolio-website/"> 
+              <div class="view-more-text">view project</div>
+              <span class="material-icons change-text-color-container">open_in_new</span>
+            </a>
+          </div>
+      
+          <div class="project-container change-border-color-container change-text-color-container change-background-color-container">
+            <img src="cgpa-calculator.png" alt="Project 2" class="project-pic change-border-color-container">
+            <h3 class="title change-text-color-container">CGPA CALCULATOR  (5.0 SCALE)</h3>
+            <div class="technologies-used-container">
+              <div class="change-border-color-container">HTML</div>
+              <div class="change-border-color-container">CSS</div>
+              <div class="change-border-color-container">JavaScript</div>
+            </div>
+            <p class="project-description">Web app that calculates GPA/CGPA automatically and visualizes academic progress.</p>
+            <a class="view-project-container change-text-color-container" href="https://uchenna7-prog.github.io/CGPA-Calculator-For-Nigerian-Students-5.0-scale-/"> 
+              <div class="view-more-text">view project</div>
+              <span class="material-icons change-text-color-container">open_in_new</span>
+            </a>
+          </div>
 
-  <script src="index-script.js"></script>
+          <div class="project-container change-border-color-container change-text-color-container change-background-color-container">
+            <img src="image-editor.jpeg" alt="Project 3" class="project-pic change-border-color-container">
+            <h3 class="title change-text-color-container">IMAGE EDITOR APP</h3>
+            <div class="technologies-used-container">
+              <div class="change-border-color-container">HTML</div>
+              <div class="change-border-color-container">CSS</div>
+              <div class="change-border-color-container">JavaScript</div>
+              <div class="change-border-color-container">python</div>
+            </div>
+            <p class="project-description">A desktop image editor with filters, cropping, and basic AI-powered enhancements.</p>
+            <a class="view-project-container change-text-color-container"> 
+              <div class="view-more-text">view project</div>
+              <span class="material-icons change-text-color-container">open_in_new</span>
+            </a>
+          </div>
+        </div>
+          <a class="see-more-text-and-icon-container change-text-color-container" href="project-page.html">
+            <span class="view-more-text">See More Projects</span>
+            <span class="material-icons view-more-arrow change-text-color-container">arrow_forward</span>
+          </a>
+      </section>
+
+      <section id="experience-page" class="change-background-image-container">
+        <h2 class="section-heading change-text-color-container">RESUME SUMMARY</h2>
+
+        <div id="time-line" class="change-text-color-container">
+          <div class="resume-section-heading-container">
+            <div class="t-circle change-border-color-container"></div>
+            <div>WORK EXPERIENCE</div>
+          </div>
+          
+          <div class="t-line change-border-color-container">
+            <p>FRONT-END WEB DEVELOPER (FREELANCE)</p>
+            <p>January 2024 - Present</p>
+            <p>Building responsive and user-friendly websites using HTML, CSS, and JavaScript. Focused on creating modern designs and clean, maintainable code.</p>
+          </div>
+
+          <div class="resume-section-heading-container">
+            <div class="t-circle change-border-color-container"></div>
+            <div>EDUCATION</div>
+          </div>
+          <div class="t-line change-border-color-container">
+            <p>B.Sc. IN COMPUTER SCIENCE</p>
+            <p>University of Port Harcourt | 2024 - Present</p>
+            <p>Pursuing a Computer Science degree with interests in Web development and Artificial Intelligence.</p>
+          </div>
+          <div class="resume-section-heading-container">
+            <div class="t-circle change-border-color-container"></div>
+            <div>LANGUAGES</div>
+          </div>
+          <div class="t-line change-border-color-container">
+            <ul>
+              <li>English (Fluent)</li>
+              <li>Igbo (Native)</li>
+            </ul>
+          </div>
+        </div>
+        
+        <a class="see-more-text-and-icon-container change-text-color-container" href="resume-page.html" >
+          <div class="view-more-text">Proceed to Full Resume</div>
+          <span class="material-icons view-more-arrow change-text-color-container">arrow_forward</span>
+        </a>
+      
+      </section>
+
+      <section id="contact-page" class="change-background-image-container">
+        <h2 class="section-heading change-text-color-container">CONTACT.</h2>
+        <form class="change-text-color-container">
+          <p>Want to work together or have a question? Get in touch - or email me directly at <a href="mailto:uchenduuchenna7@gmail.com"><strong class="change-text-color-container">uchenduuchenna7@gmail.com</strong></a> by submitting the form below.</p>
+            <input type="text" placeholder="Name" class="form-entry change-text-color-container change-border-color-container change-background-image-container">
+            <input type="text" placeholder="Email" class="form-entry change-text-color-container change-border-color-container change-background-image-container">
+            <textarea rows ="20"  placeholder="Message" class="form-entry change-text-color-container change-border-color-container change-background-image-container"></textarea>
+            <button id="send-button" class="change-text-color-container">
+              <span id="send-button-text" class="change-text-color-container"><i class="fa fa-paper-plane" aria-hidden="true"></i>Send Message</span>
+            </button>
+        </form>
+
+      </section>
+      
+      <footer id="footer-page" class="change-background-image-container">
+        <a id="back-to-top-text-and-icon-container" href="#home-page" class="change-text-color-container">
+          <span class="material-icons change-border-color-container" id="arrow-upward">arrow_upward</span>
+          <span>Back to top</span>
+        </a>
+        <div id="footer-main-text-container" class="change-text-color-container">
+          <h1>LET'S CREATE </h1>
+          <h1>SOMETHING AMAZING.</h1>
+          <h3>Ready to craft modern, interactive ,and user-friendly interfaces?.</h3>
+          <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
+        </div>
+        <div id="footer-bottom-section-container" class="change-text-color-container">
+          <div id="footer-contact-details-container">
+            <span id="footer-social-icons-container">
+                <a class="social-icon" href="https://www.linkedin.com/in/uchenna-uchendu-b2a0a8307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andriod_app"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
+                <a class="social-icon" href="https://github.com/uchenna7-prog"><i class="fa-brands fa-github fa-lg"></i></a>
+                <a class="social-icon" href="https://x.com/?utm_source=homescreen&utm_medium=shortcut"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+                <a class="social-icon" href="https://www.facebook.com/uchenna.uchendu.383796"><i class="fa-brands fa-facebook fa-lg"></i></a>
+            </span>
+              <div id="footer-email-container">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:uchenduuchenna7@gmail.com" class="change-text-color-container">uchenduuchenna7@gmail.com</a>
+              </div>
+              <span><i class="fa-brands fa-whatsapp"></i> +234 9079116980</span>
+          </div>
+          <p>© 2025 Uchendu Uchenna. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+    <script src="index-script.js"></script>
 
   </body>
 
