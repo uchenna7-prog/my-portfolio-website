@@ -47,10 +47,10 @@
           <h6>FRONT-END Web Developer | CS Student.</h6>
           <div id="socials-and-resume-btn-container">
               <span id="homepage-social-icons-container">
-                <a class="social-icon" href="https://www.linkedin.com/in/uchenna-uchendu-b2a0a8307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andriod_app"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
-                <a class="social-icon" href="https://github.com/uchenna7-prog"><i class="fa-brands fa-github fa-lg"></i></a>
-                <a class="social-icon" href="https://x.com/?utm_source=homescreen&utm_medium=shortcut"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
-                <a class="social-icon" href="https://www.facebook.com/uchenna.uchendu.383796"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                <a class="homepage-social-icon" href="https://www.linkedin.com/in/uchenna-uchendu-b2a0a8307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andriod_app"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
+                <a class="homepage-social-icon" href="https://github.com/uchenna7-prog"><i class="fa-brands fa-github fa-lg"></i></a>
+                <a class="homepage-social-icon" href="https://x.com/?utm_source=homescreen&utm_medium=shortcut"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+                <a class="homepage-social-icon" href="https://www.facebook.com/uchenna.uchendu.383796"><i class="fa-brands fa-facebook fa-lg"></i></a>
               </span>
               <button id="resume-button" class="cut-bottom-left change-text-color-container change-button-color-container" onclick="window.location.href='resume-page.html'">Résumé</button>
           </div>
@@ -60,31 +60,32 @@
       </section>
 
       <section id="about-page" class="change-background-image-container">
-        <div id="profile-picture-container">
-          <img id ="profile-picture" src="profile-img.jpg" class="change-border-color-container">
-        </div>
+        <h1 class="section-heading change-text-color-container">ABOUT ME.</h1>
         <div id="about-page-text-container" class="change-text-color-container">
-          <h1 class="section-heading change-text-color-container">ABOUT ME.</h1>
-          <p>I am Uchendu Uchenna, a passionate Frontend Developer based in Port Harcourt, Nigeria. I am currently studying Computer Science at the university of Port Harcourt, where I am building my problem solving skills and deepening my understanding of how technology works.</p>
-          <p>I am currently seeking internship opportunities and freelance projects where I can apply my skills, learn from experienced developers, and contribute to meaningful work. If you are looking for a dedicated, eager-to-learn developer who brings both technical ability and genunine enthusiasm to the table, Let's connect.</p>
+          <img id ="profile-picture" src="profile-img.jpg" class="change-border-color-container">
+          <div>
+            <p>I am Uchendu Uchenna, a passionate Frontend Developer based in Port Harcourt, Nigeria. I build interactive and responsive websites that focus on clean design and great user experience.</p>
+            <p>I am currently seeking internship opportunities and freelance projects where I can apply my skills, learn from experienced developers, and contribute to meaningful work. If you are looking for a dedicated, eager-to-learn developer who brings both technical ability and genunine enthusiasm to the table, Let's connect.</p>
+          </div>
+       
         </div>
       </section>
 
       <section id="services-page" class="change-background-image-container change-text-color-container">
         <h1 class="section-heading change-text-color-container">SERVICES.</h1>
         <div id="services-container">
-          <div class="service-card change-text-color-container change-background-color-container ">
-            <h3 class="title change-text-color-container">FRONTEND <i class="fa fa-code" aria-hidden="true"></i></h3>
+          <div class="service-card change-background-color-container ">
+            <h3 class="title">FRONTEND <i class="fa fa-code" aria-hidden="true"></i></h3>
             I create modern, responsive, and fast web interfaces with HTML, CSS, and JavaScript frameworks.
             <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
           </div>
-          <div class="service-card change-text-color-container change-background-color-container">
-            <h3 class="title change-text-color-container">FREELANCE</h3>
+          <div class="service-card change-background-color-container">
+            <h3 class="title">FREELANCE</h3>
             I am available for freelance work to offer reliable and high-quality website development.
             <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
           </div>
-          <div class="service-card change-text-color-container change-background-color-container">
-            <h3 class="title change-text-color-container">INTERNSHIP</h3>
+          <div class="service-card change-background-color-container">
+            <h3 class="title">INTERNSHIP</h3>
             I am open to join a team as an intern and contribute to creative and functional web solutions.
             <button class="service-btn cut-bottom-left change-button-color-container" onclick="window.location.href='#contact-page'">Contact Me</button>
           </div>
@@ -106,10 +107,10 @@
         <h2 class="section-heading change-text-color-container">RECENT PROJECTS.</h2>
         <div>
       
-          <div class="project-container change-border-color-container change-text-color-container change-background-color-container">
+          <div class="project-container change-border-color-container change-background-color-container">
             <img src="portfolio-website.png" alt="Project 1" class="project-pic change-border-color-container">
 
-            <h3 class="title change-text-color-container">PORTFOLIO WEBSITE</h3>
+            <h3>PORTFOLIO WEBSITE</h3>
             <div class="technologies-used-container">
               <div class="change-border-color-container">HTML</div>
               <div class="change-border-color-container">CSS</div>
@@ -117,30 +118,51 @@
               <div class="change-border-color-container">python</div>
             </div>
             <p class="project-description">A responsive personal website showcasing skills, projects, and contact information.</p>
-            <a class="view-project-container change-text-color-container" href="https://uchenna7-prog.github.io/my-portfolio-website/"> 
-              <div class="view-more-text">view project</div>
+            <div class="view-more-about-project-container" >
+              <div onclick="window.location.href='https://uchenna7-prog.github.io/my-portfolio-website/'" class="change-text-color-container project-btn"> 
+                <span>live demo</span> 
+                <i class="fa-solid fa-link"></i>
+              </div>
+              <div class="change-text-color-container project-btn">
+                <span>source code</span> 
+                <i class="fa-brands fa-github fa-lg"></i>
+              </div>
+            </div>
+            <a class="see-project-details-container change-text-color-container project-btn">
+              <span>Project full details</span>
               <span class="material-icons change-text-color-container">open_in_new</span>
             </a>
           </div>
       
-          <div class="project-container change-border-color-container change-text-color-container change-background-color-container">
+          <div class="project-container change-border-color-container change-background-color-container">
             <img src="cgpa-calculator.png" alt="Project 2" class="project-pic change-border-color-container">
-            <h3 class="title change-text-color-container">CGPA CALCULATOR  (5.0 SCALE)</h3>
+            <h3>CGPA CALCULATOR</h3>
             <div class="technologies-used-container">
               <div class="change-border-color-container">HTML</div>
               <div class="change-border-color-container">CSS</div>
               <div class="change-border-color-container">JavaScript</div>
             </div>
             <p class="project-description">Web app that calculates GPA/CGPA automatically and visualizes academic progress.</p>
-            <a class="view-project-container change-text-color-container" href="https://uchenna7-prog.github.io/CGPA-Calculator-For-Nigerian-Students-5.0-scale-/"> 
-              <div class="view-more-text">view project</div>
-              <span class="material-icons change-text-color-container">open_in_new</span>
-            </a>
+            <div class="view-more-about-project-container" >
+              <div href="https://uchenna7-prog.github.io/CGPA-Calculator-For-Nigerian-Students-5.0-scale-/" class="change-text-color-container project-btn"> 
+                <span>live demo</span> 
+                <i class="fa-solid fa-link"></i>
+              </div>
+              <div class="change-text-color-container  project-btn" class="change-text-color-container project-btn">
+                <span>source code</span> 
+                <i class="fa-brands fa-github fa-lg"></i>
+              </div>
+            </div>
+              <div class="see-project-details-container change-text-color-container project-btn">
+                <span>Project full details</span>
+                <span class="material-icons change-text-color-container">open_in_new</span>
+              </div>
+            
           </div>
 
-          <div class="project-container change-border-color-container change-text-color-container change-background-color-container">
+          <div class="project-container change-border-color-container change-background-color-container">
             <img src="image-editor.jpeg" alt="Project 3" class="project-pic change-border-color-container">
-            <h3 class="title change-text-color-container">IMAGE EDITOR APP</h3>
+            <h3>IMAGE EDITOR APP</h3>
             <div class="technologies-used-container">
               <div class="change-border-color-container">HTML</div>
               <div class="change-border-color-container">CSS</div>
@@ -148,8 +170,18 @@
               <div class="change-border-color-container">python</div>
             </div>
             <p class="project-description">A desktop image editor with filters, cropping, and basic AI-powered enhancements.</p>
-            <a class="view-project-container change-text-color-container"> 
-              <div class="view-more-text">view project</div>
+            <div class="view-more-about-project-container"> 
+              <a class="change-text-color-container  project-btn">
+                <span>live demo</span> 
+                <i class="fa-solid fa-link"></i>
+              </a>
+              <a class="change-text-color-container project-btn">
+                <span>source code</span> 
+                <i class="fa-brands fa-github fa-lg"></i>
+              </a>
+            </div>
+            <a class="see-project-details-container change-text-color-container project-btn">
+              <span>Project full details</span>
               <span class="material-icons change-text-color-container">open_in_new</span>
             </a>
           </div>
@@ -231,10 +263,10 @@
         <div id="footer-bottom-section-container" class="change-text-color-container">
           <div id="footer-contact-details-container">
             <span id="footer-social-icons-container">
-                <a class="social-icon" href="https://www.linkedin.com/in/uchenna-uchendu-b2a0a8307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andriod_app"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
-                <a class="social-icon" href="https://github.com/uchenna7-prog"><i class="fa-brands fa-github fa-lg"></i></a>
-                <a class="social-icon" href="https://x.com/?utm_source=homescreen&utm_medium=shortcut"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
-                <a class="social-icon" href="https://www.facebook.com/uchenna.uchendu.383796"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                <a class="footer-social-icon" href="https://www.linkedin.com/in/uchenna-uchendu-b2a0a8307?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=andriod_app"><i class="fa-brands fa-linkedin-in fa-lg"></i></a>
+                <a class="footer-social-icon" href="https://github.com/uchenna7-prog"><i class="fa-brands fa-github fa-lg"></i></a>
+                <a class="footer-social-icon" href="https://x.com/?utm_source=homescreen&utm_medium=shortcut"><i class="fa-brands fa-x-twitter fa-lg"></i></a>
+                <a class="footer-social-icon" href="https://www.facebook.com/uchenna.uchendu.383796"><i class="fa-brands fa-facebook fa-lg"></i></a>
             </span>
               <div id="footer-email-container">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
