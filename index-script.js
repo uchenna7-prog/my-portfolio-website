@@ -19,7 +19,40 @@ const mobileMenu = document.getElementById("mobile-menu");
 
 const contrastButton = document.getElementById("contrast-button");
 
+const aboutPageTextContainer = document.getElementById("about-page-text-container")
+const sectionHeadings = document.querySelectorAll(".section-heading")
+const projectContainers = document.querySelectorAll(".project-container")
+const observer1 = new IntersectionObserver((pages,observer)=>{
+  pages.forEach(page=>{
 
+    if(page.isIntersecting){
+      page.target.classList.add("visible")
+   
+    }
+    else{
+      page.target.classList.remove("visible")
+    }
+  })
+},{threshold:0.5})
+
+const observer2 = new IntersectionObserver((pages,observer)=>{
+  pages.forEach(page=>{
+    if(page.isIntersecting){
+      page.target.classList.add("visible")
+    }
+    else{
+      page.target.classList.remove("visible") 
+    }
+    
+  })
+},{threshold:0.4})
+observer1.observe(aboutPageTextContainer)
+sectionHeadings.forEach(sectionHeading=>{
+  observer2.observe(sectionHeading)
+})
+projectContainers.forEach(projectContainer=>{
+  observer2.observe(projectContainer)
+})
 
 homeButton.addEventListener("click",e=>{
   e.preventDefault();
