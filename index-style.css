@@ -772,10 +772,7 @@ color:  #928DAB;
   }
   .section-heading{
     transform: translateX(-40px);
-  }
-  #home-page{
-    background-image: url("white-homepage.jpeg");
-  }
+  }
   #homepage-social-icons-container {
     margin-top: 6px;
     display: flex;
