@@ -10,12 +10,12 @@ const changeButtonColorContainers = document.querySelectorAll(".change-button-co
 const sendButton = document.getElementById("send-button");
 const homePage = document.getElementById("home-page");
 const footerPage = document.getElementById("footer-page")
-const socialIcons = document.querySelectorAll(".social-icon");
-
+const footerSocialIcons = document.querySelectorAll(".footer-social-icon");
+const homePageSocialIcons = document.querySelectorAll(".homepage-social-icon")
 const homeButton = document.getElementById("home-button");
 const backToTopTextAndIconContainer = document.getElementById("back-to-top-text-and-icon-container");
 
-const mobileMenuOptions =  document.querySelectorAll(".mobile-link");
+const mobileMenuOptions =  document.querySelectorAll(".mobile-menu-option");
 const menuButton = document.getElementById("menu-button");
 const mobileMenu = document.getElementById("mobile-menu");
 
@@ -66,7 +66,7 @@ backToTopTextAndIconContainer.addEventListener("click",e=>{
 });
 
 contrastButton.addEventListener("click", () => {
-  if(darkMode){
+  if(!darkMode){
     darkMode = false;
     contrastButton.textContent="dark_mode";
  
@@ -90,9 +90,12 @@ contrastButton.addEventListener("click", () => {
     changeButtonColorContainers.forEach(container=>{
       container.classList.toggle("dark-mode-button");
     });
-    socialIcons.forEach(icon=>{
+    footerSocialIcons.forEach(icon=>{
       icon.classList.toggle("dark-mode");
     });
+    homePageSocialIcons.forEach(icon=>{
+      icon.classList.toggle("dark-mode")
+    })
   }
 
   else{
@@ -119,13 +122,24 @@ contrastButton.addEventListener("click", () => {
     changeButtonColorContainers.forEach(container=>{
       container.classList.toggle("dark-mode-button");
     });
-    socialIcons.forEach(icon=>{
+    footerSocialIcons.forEach(icon=>{
       icon.classList.toggle("dark-mode");
     });
+    homePageSocialIcons.forEach(icon=>{
+      icon.classList.toggle("dark-mode")
+    })
 
   }
 
 });
+mobileMenuOptions.forEach(option=>{
+  option.addEventListener("click",()=>{
+    mobileMenu.classList.remove("active");
+    menuButton.textContent =  "menu";
+  });
+
+});
+
 
 menuButton.addEventListener("click", () => {
   mobileMenu.classList.toggle("active");
